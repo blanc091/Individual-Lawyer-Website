@@ -1,6 +1,62 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Ignore build outputs
+bin/
+obj/
 
-/.vs
-/Individual-Lawyer-Website/.vs/Individual-Lawyer-Website
+# User-specific files
+*.user
+*.suo
+*.vsp
+*.vssscc
+*.csproj.user
+.vs/
+
+# Logs & temp files
+*.log
+*.tlog
+*.cache
+*.pdb
+
+# NuGet packages
+packages/
+!packages/repositories.config
+
+# Dependency caches
+node_modules/
+bower_components/
+
+# Publish & deployment
+publish/
+out/
+
+# Rider/JetBrains files
+.idea/
+*.sln.iml
+
+# Resharper files
+*.DotSettings.user
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Visual Studio Code settings
+.vscode/
+
+# SQLite database files (if applicable)
+*.db
+*.db-shm
+*.db-wal
+
+# Generated files from migrations
+Migrations/
+
+# Maui-specific ignores
+Platforms/
+Resources/
+
+# Prevent secrets from being committed
+secrets.json
+appsettings.*.json
