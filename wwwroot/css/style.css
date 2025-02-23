@@ -80,8 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: justify !important;
+    margin-bottom: 1rem;
 }
 
 abbr[title],
@@ -7581,6 +7582,7 @@ button.bg-dark:focus {
 
 .m-0 {
   margin: 0 !important;
+  text-align: justify !important;
 }
 
 .mt-0,
