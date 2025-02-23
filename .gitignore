@@ -60,3 +60,4 @@ Resources/
 # Prevent secrets from being committed
 secrets.json
 appsettings.*.json
+/appsettings.json
