@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-public class ApplicationDbContext : DbContext
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+public class ApplicationDbContext : IdentityDbContext<User>
 {
     public DbSet<User> Users { get; set; }
     public DbSet<Case> Cases { get; set; }

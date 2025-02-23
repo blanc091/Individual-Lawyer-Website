@@ -1,11 +1,11 @@
-﻿public class User
+﻿using Microsoft.AspNetCore.Identity;
+
+public class User : IdentityUser
 {
-    public int Id { get; set; }
-    public string Username { get; set; }
-    public string PasswordHash { get; set; }
-    public string Email { get; set; }
-    public string PreferredName { get; set; }
-    public bool IsActive { get; set; }
-    public bool HasActiveCase { get; set; }
-    public ICollection<Case> Cases { get; set; }
+    public override required string PasswordHash { get; set; }
+    public override required string Email { get; set; }
+    public required string PreferredName { get; set; }
+    public required bool IsActive { get; set; }
+    public required bool HasActiveCase { get; set; }
+    public virtual ICollection<Case>? Cases { get; set; }
 }
