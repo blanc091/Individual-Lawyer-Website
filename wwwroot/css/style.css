@@ -595,7 +595,22 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+.page-wrapper {
+    background-color: #4e5757; /* Light gray background */
+    padding: 0px 0; /* Padding at the top and bottom */
+    min-height: 100vh; /* Ensures full height */
+    display: flex;
+    justify-content: center;
+}
 
+.content-container {
+    background-color: white; /* Keeps the main content white */
+    width: 95%; /* Adjust as needed */
+    max-width: 1200px; /* Limits the width */
+    padding: 20px;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
 .container,
 .container-fluid,
 .container-sm,
@@ -607,6 +622,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  color:dimgrey !important;
 }
 
 @media (min-width: 576px) {
@@ -2377,18 +2393,18 @@ fieldset:disabled a.btn {
   border-color: #576a94;
 }
 
-.btn-primary:hover {
-  color: #fff;
-  background-color: #a78a5a;
-  border-color: #9f8455;
-}
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #4e5757;
+        border-color: #9f8455;
+    }
 
-.btn-primary:focus, .btn-primary.focus {
-  color: #fff;
-  background-color: #a78a5a;
-  border-color: #9f8455;
-  box-shadow: 0 0 0 0.2rem rgba(158, 138, 104, 0.5);
-}
+    .btn-primary:focus, .btn-primary.focus {
+        color: #fff;
+        background-color: #4e5757;
+        border-color: #9f8455;
+        box-shadow: 0 0 0 0.2rem rgba(158, 138, 104, 0.5);
+    }
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #212529;
@@ -7582,7 +7598,6 @@ button.bg-dark:focus {
 
 .m-0 {
   margin: 0 !important;
-  text-align: justify !important;
 }
 
 .mt-0,
