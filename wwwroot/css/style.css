@@ -390,7 +390,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -7708,9 +7708,10 @@ button.bg-dark:focus {
 
 .mb-4,
 .my-4 {
-  margin-bottom: 1.5rem !important;
-  font-family: Georgia !important;
-  font-size: 50px !important;
+    margin-bottom: 1.5rem !important;
+    font-family: Georgia !important;
+    font-size: 50px !important;
+    text-align: center !important;
 }
 
 .ml-4,
@@ -7785,6 +7786,11 @@ button.bg-dark:focus {
   padding-bottom: 0.25rem !important;
 }
 
+
+.row.p-4.mt-5.mx-0 {
+    text-align: center !important;
+}
+
 .pl-1,
 .px-1 {
   padding-left: 0.25rem !important;
@@ -7849,7 +7855,8 @@ button.bg-dark:focus {
 
 .pr-4,
 .px-4 {
-  padding-right: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 2rem !important;
 }
 
 .pb-4,
@@ -7859,7 +7866,8 @@ button.bg-dark:focus {
 
 .pl-4,
 .px-4 {
-  padding-left: 1.5rem !important;
+      font-size: 2rem !important;
+      padding-left: 1.5rem !important;
 }
 
 .p-5 {
@@ -7868,7 +7876,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important;
+  padding-top: 1.5rem !important;
 }
 
 .pr-5,
@@ -7878,7 +7886,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .pl-5,
@@ -9861,6 +9869,10 @@ h4, h5, h6 {
   font-size: 22px;
 }
 
+.owl-carousel .owl-item {
+    margin-right: 20px !important; /* Adjust this value as needed */
+}
+
 .team-img .team-social {
   position: absolute;
   width: 100%;
@@ -9928,4 +9940,11 @@ h4, h5, h6 {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+@media (max-width: 767.98px) {
+    .img-fluid {
+        display: block;
+        margin-left: 40px;
+    }
 }

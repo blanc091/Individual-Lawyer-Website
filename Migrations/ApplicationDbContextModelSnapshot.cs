@@ -21,35 +21,6 @@ namespace IndividualLawyerWebsite.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Case", b =>
-                {
-                    b.Property<int>("CaseId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CaseId"));
-
-                    b.Property<string>("CaseName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsOngoing")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsWon")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("CaseId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Cases");
-                });
-
             modelBuilder.Entity("Contact", b =>
                 {
                     b.Property<int>("ContactId")
@@ -76,27 +47,6 @@ namespace IndividualLawyerWebsite.Migrations
                     b.HasKey("ContactId");
 
                     b.ToTable("ContactMessages");
-                });
-
-            modelBuilder.Entity("Document", b =>
-                {
-                    b.Property<int>("DocumentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DocumentId"));
-
-                    b.Property<int?>("CaseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("DocumentId");
-
-                    b.HasIndex("CaseId");
-
-                    b.ToTable("Documents");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -252,9 +202,6 @@ namespace IndividualLawyerWebsite.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("HasActiveCase")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -309,27 +256,6 @@ namespace IndividualLawyerWebsite.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Case", b =>
-                {
-                    b.HasOne("User", "User")
-                        .WithMany("Cases")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Document", b =>
-                {
-                    b.HasOne("Case", "Case")
-                        .WithMany("Documents")
-                        .HasForeignKey("CaseId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("Case");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -379,16 +305,6 @@ namespace IndividualLawyerWebsite.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Case", b =>
-                {
-                    b.Navigation("Documents");
-                });
-
-            modelBuilder.Entity("User", b =>
-                {
-                    b.Navigation("Cases");
                 });
 #pragma warning restore 612, 618
         }
