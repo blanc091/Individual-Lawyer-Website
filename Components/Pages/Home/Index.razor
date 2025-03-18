@@ -64,10 +64,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index" class="nav-item nav-link active">Home</a>
-                            <a href="#" class="nav-item nav-link">Despre mine</a>
-                            <a href="service" class="nav-item nav-link">Arii de practică</a>
-                            <a href="#" class="nav-item nav-link">Contact</a>
+                            <a href="/" class="nav-item nav-link active">Home</a>
+                            <a href="about" class="nav-item nav-link">Despre mine</a>
+                            <a href="practice" class="nav-item nav-link">Arii de practică</a>
+                            <span class="nav-item nav-link" id="contactTrigger" style="cursor: pointer;">Contact</span>
                         </div>
                         <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Programați o întâlnire</a>
                     </div>
@@ -225,49 +225,6 @@
     </div>
     <!-- Services End -->
 
-    <!-- Appointment Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="bg-appointment rounded">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-lg-6 py-5">
-                        <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
-                            <h1 class="text-center text-white mb-4">Programare</h1>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Numele Dvs." required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Email-ul Dvs." required="required" />
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="date" id="date" data-target-input="nearest">
-                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Selectați o dată" data-target="#date" data-toggle="datetimepicker" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="time" id="time" data-target-input="nearest">
-                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Selectați o oră" data-target="#time" data-toggle="datetimepicker" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                               
-                                <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Contact</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Appointment End -->
-
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
         <div class="row mt-5">
@@ -275,7 +232,7 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Adresa</h5>
+                        <h5 class="text-white" id="contactMe">Adresa</h5>
                         <p class="m-0">Cluj-Napoca, str. Borhanciului, nr. 24, bl. D, ap. 5, jud. Cluj</p>
                     </div>
                 </div>
@@ -329,6 +286,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script src="js/scrollToElement.js" defer></script>
 </body>
 
 </html>
