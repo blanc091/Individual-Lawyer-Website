@@ -69,7 +69,8 @@
                 stagePadding: 0
             },
             992:{
-                items:3
+                items: 3,
+                margin: 20
             }
         }
     });
