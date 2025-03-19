@@ -740,8 +740,8 @@ pre code {
 }
 
 .col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
+  flex: 0 0 10%;
+  max-width: 10%;
 }
 
 .col-4 {
