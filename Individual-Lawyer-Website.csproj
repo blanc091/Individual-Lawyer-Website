@@ -16,5 +16,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+  <Content Remove="wwwroot\js\index.js" />
+  <Content Remove="wwwroot\js\src\**" />
+ </ItemGroup>
 
 </Project>

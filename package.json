@@ -1,0 +1,16 @@
+{
+  "name": "individual-lawyer-website",
+  "version": "1.0.0",
+  "description": "ASP.NET Blazor .NET 9.0 presentation website for an individual lawyer, with basic functionalities and features.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
