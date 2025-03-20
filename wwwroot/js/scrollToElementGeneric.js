@@ -13,7 +13,6 @@ window.addEventListener("load", function () {
   
   addScrollListener("homeTrigger", "homeSection");
   addScrollListener("aboutTrigger", "aboutSection");
-  addScrollListener("practiceTrigger", "practiceSection");
   
   addScrollListener("contactTrigger", "contactMe");
   for (let i = 2; i <= 7; i++) {

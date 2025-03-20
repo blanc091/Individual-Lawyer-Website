@@ -36,8 +36,7 @@
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="Index" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <img src="img/barou.png" alt="">
-                </a>
-                
+                </a>                
             </div>
             <div class="col-lg-9">
                 <div class="row bg-white border-bottom d-none d-lg-flex">
@@ -71,11 +70,20 @@
                         <div class="navbar-nav mr-auto py-0">
                             <span class="nav-item nav-link" id="homeTrigger" style="cursor: pointer;">Home</span>
                             <span class="nav-item nav-link" id="aboutTrigger" style="cursor: pointer;">Despre mine</span>
-                            <span class="nav-item nav-link" id="practiceTrigger" style="cursor: pointer;">Arii de practică</span>
+                            <span class="nav-item nav-link position-relative" id="practiceTrigger" style="cursor: pointer;">
+                                Arii de practică
+                                <div id="practiceSubmenu" class="position-absolute bg-white border" style="display: none; top: 100%; left: 0;">
+                                    <span class="nav-item nav-link practice-item" data-target="practiceSection">Drept civil</span>
+                                    <span class="nav-item nav-link practice-item" data-target="practiceSection">Dreptul muncii</span>
+                                    <span class="nav-item nav-link practice-item" data-target="practiceSection">Drept comercial</span>
+                                    <span class="nav-item nav-link practice-item" data-target="practiceSection">Drept administrativ</span>
+                                </div>
+                            </span>
+
                             <span class="nav-item nav-link" id="contactTrigger" style="cursor: pointer;">Contact</span>
                         </div>
                         <a class="btn btn-primary mr-3 d-none d-lg-block" id="contactTrigger2">Programați o întâlnire</a>
-                    </div>
+                    </div>                    
                 </nav>
             </div>
         </div>
@@ -317,6 +325,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/scrollToElementGeneric.js"></script>
+    <script src="js/practiceSubmenu.js"></script>
 </body>
 
 </html>

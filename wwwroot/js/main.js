@@ -45,6 +45,7 @@
     // Service carousel
     $(".service-carousel").owlCarousel({
         autoplay: true,
+        autoplayTimeout: 30000,
         smartSpeed: 1500,
         margin: 20,
         dots: false,
